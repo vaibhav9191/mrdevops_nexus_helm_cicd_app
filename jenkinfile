@@ -1,0 +1,33 @@
+pipeline{
+    agent any 
+    
+    stages{
+
+        stage('sonar quality satus'){
+
+            agent{
+                docker{
+
+                    image 'maven'
+                }
+            }
+            steps{
+
+                script{
+                    withSonarQubeEnv(credentialsId: 'sonartoken') {
+                        // some block
+                        sh 'mvn clean sonar:sonar'
+                     
+                        
+                    }
+                }
+            }
+
+
+        }
+        stage{
+
+
+        }
+    }
+}
