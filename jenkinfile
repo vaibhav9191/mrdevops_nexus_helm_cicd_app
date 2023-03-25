@@ -36,16 +36,16 @@ pipeline{
 
         }
 
-        stage('docker build & Docker push to nexus'){
+        // stage('docker build & Docker push to nexus'){
 
-            steps{
+        //     steps{
 
-                script{
+        //         script{
 
                     
-                }
-            }
-        }
+        //         }
+        //     }
+        // }
        
     }
 }
